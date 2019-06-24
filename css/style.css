@@ -30,6 +30,7 @@ h1, h2, h3, .top-title {
 #nav-menu {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .nav-menu-items {
@@ -179,6 +180,7 @@ h1, h2, h3, .top-title {
 .access {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #place-name {
