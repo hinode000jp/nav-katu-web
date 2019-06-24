@@ -94,7 +94,7 @@ h1, h2, h3, .top-title {
     font-size: 1.4rem;
 }
 
-.fade {
+.rule {
     height: 0px;
     border-radius: 1px;
     border: 1px solid rgb(100, 100, 100);
