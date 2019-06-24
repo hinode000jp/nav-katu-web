@@ -181,6 +181,10 @@ h1, h2, h3, .top-title {
     justify-content: space-around;
 }
 
+#place-name {
+    font-size: 2rem;
+}
+
 /* Footer */
 #site-footer {
     background-color: #333;
