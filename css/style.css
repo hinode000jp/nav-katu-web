@@ -88,8 +88,8 @@ h1, h2, h3, .top-title {
     z-index: 1;
 }
 
-/* PortText */
-.port-text {
+/* Description */
+.description-text {
     text-align: center;
     line-height: 3rem;
     font-size: 1.4rem;
