@@ -88,12 +88,14 @@ h1, h2, h3, .top-title {
     z-index: 1;
 }
 
+/* PortText */
 .port-text {
     text-align: center;
     line-height: 3rem;
     font-size: 1.4rem;
 }
 
+/* HorizontalRule */
 .rule {
     height: 0px;
     border-radius: 1px;
@@ -102,12 +104,14 @@ h1, h2, h3, .top-title {
     margin: 3rem auto 1rem;
 }
 
+/* SubTitle */
 .sub-title {
     font-size: 2.4rem;
     text-align: center;
     margin: 10rem 0 4rem;
 }
 
+/* Profile */
 .profile {
     display: flex;
     justify-content: center;
@@ -135,6 +139,7 @@ h1, h2, h3, .top-title {
     padding: 0 1rem;
 }
 
+/* Works */
 .works {
     width: 80%;
     margin: 0 auto;
