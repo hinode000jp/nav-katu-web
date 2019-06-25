@@ -1,4 +1,4 @@
-window.onload = ()=> {
+window.onload = () => {
     new Swiper('.swiper-container', {
         loop: true,
         autoHeight: true,
@@ -10,11 +10,11 @@ window.onload = ()=> {
         effect: 'fade',
     });
 
-    smoothLink();
+    smoothScroll();
 }
 
-const smoothLink = () => {
-    const interval = 10;
+const smoothScroll = () => {
+    const smooth = 10;
     const divisor = 8;
     const range = (divisor / 2) + 1;
     const links = document.querySelectorAll('a[href^="#"]');
@@ -23,27 +23,27 @@ const smoothLink = () => {
         links[i].addEventListener('click', function (e) {
 
             e.preventDefault();
-            let toY;
-            let nowY = window.pageYOffset;
+            let moveY;
+            let currentY = window.pageYOffset;
             const href = e.target.getAttribute('href');
             const target = document.querySelector(href);
-            const targetRect = target.getBoundingClientRect();
-            const targetY = targetRect.top + nowY;
+            const position = target.getBoundingClientRect();
+            const targetY = position.top + currentY;
 
             // スクロール終了まで繰り返される処理
-            (doScroll = () => {
-                toY = nowY + Math.round((targetY - nowY) / divisor);
-                window.scrollTo(0, toY);
-                nowY = toY;
+            (scroll = () => {
+                moveY = currentY + Math.round((targetY - currentY) / divisor);
+                window.scrollTo(0, moveY);
+                currentY = moveY;
 
-                if (document.body.clientHeight - window.innerHeight < toY) {
+                if (document.body.clientHeight - window.innerHeight < moveY) {
                     //最下部にスクロールしても対象まで届かない場合は下限までスクロールして強制終了。
                     window.scrollTo(0, document.body.clientHeight);
                     return;
                 }
-                if (toY >= targetY + range || toY <= targetY - range) {
-                    //rangeの範囲内へ近くまで繰り返す。
-                    window.setTimeout(doScroll, interval);
+                if (moveY >= targetY + range || moveY <= targetY - range) {
+                    //rangeの範囲内へ近づくまで繰り返す。
+                    window.setTimeout(scroll, smooth);
                 } else {
                     //rangeの範囲内に来れば正確な値へ移動して終了。
                     window.scrollTo(0, targetY);
