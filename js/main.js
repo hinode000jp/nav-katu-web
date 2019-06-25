@@ -15,12 +15,9 @@ window.onload = ()=> {
         const divisor = 8;
         const range = (divisor / 2) + 1;
         const links = document.querySelectorAll('a[href^="#"]');
-        console.log(links);
-
 
         for (let i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function(e) {
-                console.log(i);
 
                 e.preventDefault();
                 let toY;
