@@ -116,12 +116,13 @@ h1, h2, h3, .top-title {
 }
 
 #profile-img {
-    width: 380px;
-    height: 380px;
+    width: 375px;
+    height: 375px;
     padding: 0 4rem;
 }
 #profile-img img {
     width: 100%;
+    min-width: 375px;
     height: 100%;
     object-fit: cover;
     object-position: 0 100%;
@@ -146,7 +147,7 @@ h1, h2, h3, .top-title {
 .work {
     margin: 0 auto;
     width: 30%;
-    min-width: 300px;
+    min-width: 260px;
     display: flex;
     justify-content: space-between;
     flex-flow: column;
